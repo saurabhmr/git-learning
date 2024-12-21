@@ -88,3 +88,26 @@ git push origin master
 #To pull the code from main 
 git checkout master
 git pull
+
+#To clone repo
+git clone https://abc.git
+
+#To check remote urls
+git remote
+git remote get-url origin
+
+#Suppose you are not owner of this repo so you'll do below to make changes to repo
+git clone https://acb.git
+git checkout -b feat/new-feature
+git add .
+git commit -m "msg here"
+git push origin feat/new-feature #It will throw an error as you're neither owner of this repo nor collaborator
+#Ask owner to add you a collaborator to push once done then you need to set url
+# Also, owner will create a branch rules that user has to create a pull request to merge into main
+git remote set-url origin https://user2@github.com/user2/anc.git
+git push origin master
+
+#Now suppose as a owner you don't want any person to push from their local
+#In this case, as a user you can fork that repo so that it will get created in your accont then you can clone that repo
+git remote set-url origin https://user2@github.com/user2/abch.git
+After dev you can push changes by creating a pull request from the forked repositories using an option compare across forks
