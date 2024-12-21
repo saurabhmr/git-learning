@@ -40,5 +40,23 @@ git checkout <id>           => Temporary moves back to particular commit
 git revert <id>             => Revert thec changes of commit id
 git reset --hard <id>       => Delete commits and reset to the required commit
 
+#Add file, folder names in .gitignore file to skip files that you don't want to stage
+git add .                   => Will only staged all the files except that are mentioned in the ignore files
+
+#Understanding branches: To add a new feature or to resolve an existing bug, we can create new branches
+git branch "feat/DATA-2376-Add-a-new-feature"
+git branch "fix/DATA-2456-Fix-error-issue"
+
+#Switch to a new branch
+git checkout "feat/DATA-2376-Add-a-new-feature"
+
+#To automatically create a new branch and checkout
+git checkout -b "feat/DATA-2376-Add-a-new-feature"
+
+#Delete a new branch
+git branch -D "feat/DATA-2376-Add-a-new-feature"
+
+#After suppose you're done with new feature development then you can do merge into main
+git merge "feat/DATA-2376-Add-a-new-feature"
 
 
