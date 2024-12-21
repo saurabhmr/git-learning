@@ -1,3 +1,10 @@
+#To set user in local git
+git config --global user.name "saurabhmr"
+git config --global user.email "mrsau@gmail.com"
+
+#To check details
+git config --list
+
 #To initialise git repo
 git init
 
