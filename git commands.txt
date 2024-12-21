@@ -66,3 +66,13 @@ git remote set-url origin https://username@github.com/uersname/repo.git
 #Will ask for token; Go to Dev Settings->Personal Access Token ->Generate a new token with repo actions
 #Push the repo with your main branch in Git using
 git push origin master
+
+#Creating a new branch
+git checkout -b feat/new-branch
+git add .
+git commit -m "Msg here"
+git push origin feat/new-branch
+#Then you can create a pull request on GitHub UI n merge to master or
+git checkout master
+git merge feat/new-branch
+git push origin master
