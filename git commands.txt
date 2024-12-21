@@ -1,0 +1,44 @@
+#To initialise git repo
+git init
+
+#To add new file in git
+git add index.html
+#Adding multiple files
+git add index.html index2.html 
+
+#To check status
+git status
+
+#Files are now staged but you'll have to do the commits
+git commit -m "Add msg here to for this commit"
+
+#Suppose now you have done more than one commit you can check history using log & you'll get ids for each commits
+git log
+
+#You'll get history of commits and you can temporary resume to older commits using id
+git checkout <id>
+#In this case you temporary goes back to older commit detached from your branch n if you want to go back to branch
+git checkout main
+
+#If you wish to revert commits you can use, that will revert that particular commit and add a message
+git revert <id>
+
+#Now we have understood how to delete older commits using git revert 
+#Suppose you want to delte old commits and go back to previous stage by not ding reverts
+#Undo changes by deleting all commits since <id>
+git reset --hard <id>
+
+Simple Git Commands
+git init                    => Initialise git repo(once per project)                   
+git add <files>             => Stage code changes
+git add . or git add *      => To include all files in folder and subfolder
+git restore --staged <file> => To unstage file 
+git commit -m "Msg here"    => Creats commits for the staged files with msg
+git status                  => Gets status for current repo(which files are staged)
+git log                     => Gives history for the commits
+git checkout <id>           => Temporary moves back to particular commit
+git revert <id>             => Revert thec changes of commit id
+git reset --hard <id>       => Delete commits and reset to the required commit
+
+
+
