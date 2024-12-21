@@ -59,4 +59,10 @@ git branch -D "feat/DATA-2376-Add-a-new-feature"
 #After suppose you're done with new feature development then you can do merge into main
 git merge "feat/DATA-2376-Add-a-new-feature"
 
-
+#How to push local repo into remote repo on GitHub
+#Create a repo on GitHub & get the link
+#On local system run below command to set origin
+git remote set-url origin https://username@github.com/uersname/repo.git
+#Will ask for token; Go to Dev Settings->Personal Access Token ->Generate a new token with repo actions
+#Push the repo with your main branch in Git using
+git push origin master
